@@ -132,3 +132,5 @@ jobs/adminbackup.py
 jobs/formsbackup.py
 jobs/jobs_forms_start.py
 jobs/viewsbackup.py
+templates/jokes/joke_listbackup.html
+templates/_basebackup.html
