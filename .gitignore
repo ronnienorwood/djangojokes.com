@@ -136,3 +136,4 @@ templates/jokes/joke_listbackup.html
 templates/_basebackup.html
 media/avatars/flexjobs_profile.png
 media/avatars/flexjobs_profile_lanIeCd.png
+djangojokes/settingsold.py

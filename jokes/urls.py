@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.urls import path
 from .views import (JokeListView, JokeDetailView,
-                    JokeCreateView, JokeUpdateView, JokeDeleteView)
+                    JokeCreateView, JokeUpdateView, JokeDeleteView, vote)
 
 app_name = 'jokes'
 urlpatterns = [
@@ -26,4 +26,5 @@ urlpatterns = [
     path('joke/<slug>/delete/', JokeDeleteView.as_view(), name='delete'),
     path('joke/create/', JokeCreateView.as_view(), name='create'),
     path('joke/<slug>/', JokeDetailView.as_view(), name='detail'),
+    path('joke/<slug>/vote/', vote, name='ajax-vote'),
 ]
