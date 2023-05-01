@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import dj_database_url
 import os
 from pathlib import Path
 
@@ -24,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&=-n^!tmq7326%#lvyv^g7k%537mhdz3_!mly(df2$jpwb-!#8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ronniedjangojokes.herokuapp.com']
 
 INTERNAL_IPS = [  # Necessary for the Debug Toolbar
     '127.0.0.1',
@@ -103,14 +104,10 @@ WSGI_APPLICATION = 'djangojokes.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jokes',
-        'USER': 'postgres',
-        'PASSWORD': 'asdf',
-        'HOST': 'localhost',
-        'PORT': 5432
+        dj_database_url.config()
     }
 }
 
