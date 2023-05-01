@@ -106,9 +106,7 @@ WSGI_APPLICATION = 'djangojokes.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        dj_database_url.config()
-    }
+    'default': dj_database_url.config()
 }
 
 # EMAIL
